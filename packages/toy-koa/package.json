@@ -2,7 +2,7 @@
   "name": "toy-koa",
   "version": "1.0.0",
   "description": "",
-  "main": "application.js",
+  "main": "./lib/application.js",
   "directories": {
     "lib": "lib"
   },

@@ -31,3 +31,11 @@ app.use((ctx, next) => {
 app.listen(10000, () => {
   console.log('listening in port 10000');
 })
+
+/**
+ * 总结 koa 的几个特点：
+ *  1. koa是一个类，类下有use、listen方法
+ *  2. use方法接收一个函数，这个函数的参数是ctx、next
+ *  3. ctx 是 res、req的扩展与结合
+ *  4. use函添加中间件洋葱模型，next可以跳到下一个中间件逻辑，同时支持async/await
+ */
