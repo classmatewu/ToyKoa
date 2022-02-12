@@ -4,7 +4,7 @@ const app = new Koa()
 
 app.use((req, res) => {
   console.log(req, res);
-  res.end('hello toy koa') // 原生res上没有send方法，那是express实现的？
+  res.end('hello toy koa') // 原生是res.end，express是res.send，koa是ctx.body
 })
 
 app.listen('10001', () => {

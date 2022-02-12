@@ -3,6 +3,9 @@
  */
 
 const http = require('http')
+const context = require('./context')
+const request = require('./request')
+const respose = require('./response')
 
 class Koa {
   constructor() {
@@ -11,6 +14,10 @@ class Koa {
 
   use(fn) {
     this.fn = fn
+  }
+
+  nativeHandleRequest(req, res) {
+    this.fn(req, res)
   }
 
   listen(...args) {
